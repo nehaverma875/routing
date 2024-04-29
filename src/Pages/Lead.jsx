@@ -5,6 +5,7 @@ import ContactLead from "./ContectLead";
 import AppointmentLead from "./AppointmentLead";
 import Navbar from "../Components/Navbar";
 import { useLocation } from "react-router-dom";
+import Sidebar from "../Components/Sidebar";
 export default function Lead() {
   const location = useLocation();
   const [tab, setTab] = useState("");
@@ -21,7 +22,10 @@ export default function Lead() {
   }, [location.search]);
 
   return (
-    <div className="flex flex-col">
+    <main className="flex">
+      <Sidebar/>
+      <section className="flex flex-col"> 
+
       <Navbar />
       <div>
         {tab === "overview" && <Overview />}
@@ -29,6 +33,7 @@ export default function Lead() {
         {tab === "contactLead" && <ContactLead />}
         {tab === "appointmentLead" && <AppointmentLead />}
       </div>
-    </div>
+      </section>
+    </main>
   );
 }

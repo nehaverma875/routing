@@ -1,9 +1,13 @@
-
+import React from 'react';
+import Sidebar from "../Components/Sidebar";
 
 export default function Home() {
+  // const isLoggedIn = useSelector(state=>state.login.isLoggedIn)
+
   return (
-    <div className="w-40">
-      home
-    </div>
-  )
+    <main className="w-40 flex">
+      <Sidebar />
+      <section>home</section>
+    </main>
+  );
 }

@@ -1,9 +1,12 @@
-
+import Sidebar from "../Components/Sidebar";
 
 export default function Data() {
   return (
-    <div>
-      data
-    </div>
-  )
+    <>
+    <main className="w-40 flex">
+      <Sidebar />
+      <section>Data</section>
+    </main>
+    </>
+  );
 }

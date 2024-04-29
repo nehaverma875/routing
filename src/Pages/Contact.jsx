@@ -1,8 +1,12 @@
+import Sidebar from "../Components/Sidebar";
 
 export default function Contact() {
   return (
-    <div>
-      contact
-    </div>
-  )
+    <>
+    <main className="w-40 flex">
+      <Sidebar />
+      <section>Contact</section>
+    </main>
+    </>
+  );
 }

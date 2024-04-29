@@ -1,9 +1,12 @@
-
+import Sidebar from "../Components/Sidebar";
 
 export default function Account() {
   return (
-    <div>
-      account
-    </div>
-  )
+    <>
+    <main className="w-40 flex">
+      <Sidebar />
+      <section>Accout</section>
+    </main>
+    </>
+  );
 }

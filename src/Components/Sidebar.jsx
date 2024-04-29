@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logoutUser } from "../../redux/slice";
+import { useNavigate } from "react-router-dom";
 export default function Sidebar() {
+  const Dispatch = useDispatch();
+  const Navigate = useNavigate();
+  const handleLogOut =()=>{
+    Dispatch(logoutUser());
+    Navigate("/")
+  }
   return (
     <div>
       <div className="sidebar border w-40 h-screen text-white bg-blue-950 rounded">
         <ul className="flex flex-col gap-2 items-start justify-start px-2">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li className="dropdown">
             <span>Sales</span>
@@ -19,7 +28,7 @@ export default function Sidebar() {
             </ul>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/login">Contact</Link>
           </li>
           <li>
             <Link to="/account">Account</Link>
@@ -28,7 +37,7 @@ export default function Sidebar() {
             <Link to="/appointment">Appointment</Link>
           </li>
           <li>
-            <span>Logout</span>
+            <button onClick={handleLogOut}>Logout</button>
           </li>
         </ul>
       </div>

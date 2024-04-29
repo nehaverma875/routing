@@ -1,8 +1,12 @@
+import Sidebar from "../Components/Sidebar";
 
 export default function Appointment() {
   return (
-    <div>
-      appointment
-    </div>
-  )
+    <>
+    <main className="w-40 flex">
+      <Sidebar />
+      <section>Appointment</section>
+    </main>
+    </>
+  );
 }
