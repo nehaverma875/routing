@@ -49,7 +49,7 @@ export default function Login() {
       if (!response.ok) {
         // If login fails due to unauthorized access, show error message
         setError("Unauthorized");
-        setLoading(false);
+        setLoading(false); 
       } 
       if(response.ok) {
         // If login is successful, set loginSuccess to true and redirect to "/home"
